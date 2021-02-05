@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+#countriesdiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+.country{
+    border: 1px solid blue;
+    border-radius: 5px;
+    width: 350px;
+    text-align: center;
+    padding: 15px;
+}
+.title{
+    color: brown;
+    font-size: 40px;
+}
