@@ -7,9 +7,7 @@ fetch('https://restcountries.eu/rest/v2/all')
 
 const displayData = countries =>{
     const countriesDiv = document.getElementById('countriesdiv');
-    for (let i = 0; i < countries.length; i++) {
-        const country = countries[i];
-        
+    countries.forEach(country => {
         const countryDiv = document.createElement('div');
         countryDiv.className = "country"
         const countryInfo =`
@@ -17,7 +15,6 @@ const displayData = countries =>{
             <p>${country.capital}</p>
         `
         countryDiv.innerHTML = countryInfo
-        countriesDiv.appendChild(countryDiv);        
-
-    }
+        countriesDiv.appendChild(countryDiv);      
+    });
 }
